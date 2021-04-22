@@ -72,7 +72,7 @@ powerline官网：http://powerline.readthedocs.io/en/latest/installation.html
 安装powerline的方式依然简单，也只需要一条命令：
 
 ```bash
-pip install powerline-status --user
+pip3 install powerline-status --user
 ```
 
 没有安装pip的同学可能会碰到zsh: command not found: pip。
