@@ -224,3 +224,57 @@ vi ~/.zshrc
 有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。
 
 Preferences -> Profiles -> Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。
+
+
+配置autojump
+效果：
+
+ 实现目录间快速跳转，想去哪个目录直接 j + 目录名(甚至不用输全)，不用在频繁的 cd 了
+
+项目地址：https://github.com/wting/autojump
+
+安装方法：
+
+1、brew安装
+
+brew install autojump
+
+ 
+
+2、修改 `~/.zshrc` 文件，添加到plugins配置列表并在尾部追加如下内容：
+
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+ 
+
+plugins中别忘了添加上autojump：
+
+plugins=(
+
+ git
+
+ zsh-autosuggestion
+
+ autojump
+
+)
+ 
+
+然后source使他生效
+
+ 
+
+PS：在brew安装完会有提示输出，按照提示来配置就好：
+
+Add the following line to your ~/.bash_profile or ~/.zshrc file (and remember
+to source the file to update your current session):
+  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+If you use the Fish shell then add the following line to your ~/.config/fish/config.fish:
+  [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+zsh completions have been installed to:
+  /usr/local/share/zsh/site-functions
+  
+  
+配置 iterm 的 status bar:https://sspai.com/post/63241
